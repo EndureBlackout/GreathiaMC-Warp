@@ -1,0 +1,8 @@
+name: GreathiaMCWarp
+main: me.endureblackout.GreathiaMC_Warp.WarpMain
+version: 1.0
+description: Custom warp plugin for GreathiaMC
+author: [EndureBlackout]
+commands:
+  warp:
+    description: Main Command
