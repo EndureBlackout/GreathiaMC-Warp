@@ -33,10 +33,14 @@ public class CommandHandler implements CommandExecutor {
 
 					Set<String> keys = file.getConfigurationSection("Warps").getKeys(false);
 
-					p.sendMessage(ChatColor.BLUE + "Warps:");
+					if (keys.size() != 0) {
+						p.sendMessage(ChatColor.BLUE + "Warps:");
 
-					for (String warp : keys) {
-						p.sendMessage(ChatColor.BLUE + "     " + warp);
+						for (String warp : keys) {
+							p.sendMessage(ChatColor.BLUE + "     " + warp);
+						}
+					} else {
+						p.sendMessage(ChatColor.RED + "No warps yet.");
 					}
 				} else if (args.length == 1) {
 					Warp warp = new Warp(args[0]);
